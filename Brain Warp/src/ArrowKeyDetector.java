@@ -48,7 +48,7 @@ public class ArrowKeyDetector {
                         System.out.println(keyCode);
                         break;
                     case KeyEvent.VK_DOWN:
-                        down.setText("Down: " + Integer.toString(++downCount));
+                        down.setText("Down: " + (++downCount));
                         System.out.println(keyCode);
                         break;
                     case KeyEvent.VK_LEFT:
