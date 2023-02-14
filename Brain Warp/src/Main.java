@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to Brain fuck. Type when you are ready to begin." + '\n' + "*hint* - cuck");
+        System.out.println("Welcome to Brain fuck. Type what you are, to begin." + '\n' + "*hint* - cuck");
 
         String input = "";
         Scanner cuck = new Scanner(System.in);
