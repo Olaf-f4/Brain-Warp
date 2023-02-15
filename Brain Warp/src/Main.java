@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -36,14 +37,37 @@ public class Main {
 
         //int randomNum = ThreadLocalRandom.current().nextInt(1, 6);
         //System.out.println(randomNum);
+
+
         Scanner scan = new Scanner(System.in);
 
-        int[] one = {3, 4, 5, 6};
-        int[] two = {3, 4, 5, 6};
-        int[] three = {1, 2, 5, 6};
-        int[] four = {1, 2, 5, 6};
-        int[] five = {1, 2, 3, 4};
-        int[] six = {1, 2, 3, 4};
+        int[][] gombo = {{3, 4, 5, 6}, {3, 4, 5, 6}, {1, 2, 5, 6}, {1, 2, 5, 6}, {1, 2, 3, 4}, {1, 2, 3, 4}};
+
+        int faceUp = 0;
+        String code = "";
+
+        int codeLength = ;
+
+        easy = 4
+
+        for (int i = 0; i < 6; i++) {
+            int[] choices = gombo[faceUp];
+            System.out.println(Arrays.toString(choices));
+            int nextNumInCode = getRandomElement(choices);
+            System.out.println(nextNumInCode);
+            code += nextNumInCode;
+            faceUp = nextNumInCode - 1;
+        }
+
+        System.out.println(code);
+
+
+
+
+
+
+
+/*
 
         int up = 1;
         for (int i = 0; i < 6; i++) {
@@ -81,5 +105,10 @@ public class Main {
                     //System.out.println("Get fucked");
             }
         }
+
+ */
     }
 }
+
+
+
