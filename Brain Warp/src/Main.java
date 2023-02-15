@@ -45,23 +45,40 @@ public class Main {
         int[] five = {1, 2, 3, 4};
         int[] six = {1, 2, 3, 4};
 
-        //int randNum = getRandomElement(one);
-        //System.out.println(randNum);
-
         int up = 1;
         for (int i = 0; i < 6; i++) {
             switch (up) {
                 case (1):
-                    int randNum = getRandomElement(one);
-                    System.out.println(randNum);
+                    int randNumOne = getRandomElement(one);
+                    System.out.println(randNumOne);
                     int num = scan.nextInt();
-                    if (num == randNum) {
+                    if (num == randNumOne) {
                         System.out.println("Correct, next up...");
+                        up = randNumOne;
+                    } else {
+                        System.out.println("You're basic");
+                        break;
                     }
                 case (2):
-                    //int randNum = getRandomElement(one);
-                    //System.out.println(randNum);
-                    break;
+                    String sOut = Integer.toString(up);
+                    //System.out.println("This is the string " + sOut);
+                    if (sOut.equalsIgnoreCase("1")) {
+                        int randNumTwo = getRandomElement(two);
+                        System.out.println("This is " + randNumTwo);
+                    }
+                    try{
+                        up = Integer.parseInt(sOut);
+                        //System.out.println(up);
+                    }
+                    catch (NumberFormatException exception){
+                        exception.printStackTrace();
+                    }
+                case (3):
+                    //String threes = Integer.toString(up);
+                    //System.out.println("This is the string" + threes);
+
+                case (4):
+                    //System.out.println("Get fucked");
             }
         }
     }
