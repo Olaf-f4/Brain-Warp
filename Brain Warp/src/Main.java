@@ -69,6 +69,8 @@ public class Main {
 
 /*
 
+       This code is dogshit currently
+
         int up = 1;
         for (int i = 0; i < 6; i++) {
             switch (up) {
