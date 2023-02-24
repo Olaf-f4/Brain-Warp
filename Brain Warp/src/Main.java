@@ -1,13 +1,69 @@
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
-    public static int getRandomElement(int[] arr){
+
+
+    public static int getRandomElement(int[] arr) {
         return arr[ThreadLocalRandom.current().nextInt(arr.length)];
     }
-    public static <function> void main(String[] args) {
-        System.out.println("Welcome to Brain fuck. Type what you are, to begin." + '\n' + "*hint* - cuck");
+
+    public static void clearScreen(){
+        for (int n=0; n < 50; n++) {
+            System.out.println("");
+        }
+    }
+
+    public static void main(String[] args) {
+        CodeGenerator cg = new CodeGenerator();
+        System.out.println("Random code of length 5: " + cg.generateCode(10));
+        gameBall rat = new gameBall();
+
+        for (int i=0; i < 4; i++) {
+            rat.gameState();
+            rat.rotateLeft();
+        }
+        rat.gameState();
+        //clearScreen();
+        CodeBuster l = new CodeBuster();
+        l.playGame();
+    }
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ System.out.println("Welcome to Brain fuck. Type what you are, to begin." + '\n' + "*hint* - cuck");
 
         String input = "";
         Scanner cuck = new Scanner(System.in);
@@ -35,41 +91,8 @@ public class Main {
             System.exit(0);
         }
 
-        //int randomNum = ThreadLocalRandom.current().nextInt(1, 6);
-        //System.out.println(randomNum);
 
 
-        Scanner scan = new Scanner(System.in);
-
-        int[][] gombo = {{3, 4, 5, 6}, {3, 4, 5, 6}, {1, 2, 5, 6}, {1, 2, 5, 6}, {1, 2, 3, 4}, {1, 2, 3, 4}};
-
-        int faceUp = 0;
-        String code = "";
-
-        int codeLength = ;
-
-        easy = 4
-
-        for (int i = 0; i < 6; i++) {
-            int[] choices = gombo[faceUp];
-            System.out.println(Arrays.toString(choices));
-            int nextNumInCode = getRandomElement(choices);
-            System.out.println(nextNumInCode);
-            code += nextNumInCode;
-            faceUp = nextNumInCode - 1;
-        }
-
-        System.out.println(code);
-
-
-
-
-
-
-
-/*
-
-       This code is dogshit currently
 
         int up = 1;
         for (int i = 0; i < 6; i++) {
@@ -109,8 +132,6 @@ public class Main {
         }
 
  */
-    }
-}
 
 
 
