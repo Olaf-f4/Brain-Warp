@@ -45,6 +45,10 @@ public class gameBall {
     }
 
     public void gameState() {
+        for (int n = 0; n < 50; n++){
+            System.out.println("");
+        }
+
         //TOP BOTTOM LEFT RIGHT
         System.out.println("  " + this.top);
         System.out.println(this.left + " " + this.faceUp + " " + this.right);
