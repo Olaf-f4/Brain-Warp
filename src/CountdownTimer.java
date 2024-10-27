@@ -19,7 +19,7 @@ public class CountdownTimer {
                     timer.cancel();
                 }
             }
-        }, 0, 1000);
+        }, 0, 5000);
     }
 
     public int getRemainingTime(){

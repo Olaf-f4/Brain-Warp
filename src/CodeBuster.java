@@ -4,9 +4,6 @@ import java.util.Scanner;
 public class CodeBuster {
 
     public void playGame() throws InterruptedException {
-        int roundNumber = 1;
-        int codeLength = 5;
-
         CodeGenerator cGen = new CodeGenerator();
         gameBall gameObj = new gameBall();
 
@@ -18,25 +15,28 @@ public class CodeBuster {
 
         while (timer.getRemainingTime() > 0) {
             gameObj.gameState();
-            Scanner userInput = new Scanner(System.in);
-            String input = userInput.next();
 
-            switch (input){
-                case "w" -> {
-                    gameObj.rotateUp();
-                }
-                case "a" -> {
-                    gameObj.rotateLeft();
-                }
-                case "d" -> {
-                    gameObj.rotateRight();
-                }
-                case "s" -> {
-                    gameObj.rotateLeft();
+            try (Scanner userInput = new Scanner(System.in)){
+                String input = userInput.next();
+
+                switch (input){
+                    case "w" -> {
+                        gameObj.rotateUp();
+                    }
+                    case "a" -> {
+                        gameObj.rotateLeft();
+                    }
+                    case "d" -> {
+                        gameObj.rotateRight();
+                    }
+                    case "s" -> {
+                        gameObj.rotateLeft();
+                    }
                 }
             }
-
-            Thread.sleep(1000);
+            catch (Exception e){
+                System.out.println("Nothing"); 
+            }
         }
     }
 
