@@ -56,5 +56,18 @@ public class gameBall {
         System.out.println("--------------------");
 
     }
+
+    public void reset() {
+        this.faceUp = 1;
+        this.faceDown = 2;
+        this.top = 5;
+        this.bottom = 6;
+        this.left = 3;
+        this.right = 4; 
+    }
+
+    public int gameFace(){
+        return this.faceUp;
+    }
 }
 

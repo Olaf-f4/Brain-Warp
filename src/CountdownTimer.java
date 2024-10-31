@@ -14,12 +14,12 @@ public class CountdownTimer {
             @Override // Don't know what this does but yellow squiggle
             public void run(){
                 if (remainingTime >= 0){
-                    System.out.println(remainingTime--);
+                    remainingTime--;
                 } else{
                     timer.cancel();
                 }
             }
-        }, 0, 5000);
+        }, 0, 1000);
     }
 
     public int getRemainingTime(){
